@@ -1,4 +1,4 @@
-package com.qa.dave.jones.springyspringStarterExercise;
+package com.qa.jones.dave;
 
 import org.springframework.boot.SpringApplication;
 

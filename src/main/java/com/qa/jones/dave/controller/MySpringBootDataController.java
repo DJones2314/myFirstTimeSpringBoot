@@ -29,12 +29,13 @@ public class MySpringBootDataController {
 
 	// method to create a person
 
-	@PostMapping("/MySpringDataModel")
+	@PostMapping("/person")
 	public mySpringBootDataModel createPerson(@Valid @RequestBody mySpringBootDataModel mSDM) {
 		return myRepository.save(mSDM);
 	}
 
 	// Method to get a person
+	@GetMapping("person/{id}")
 	public mySpringBootDataModel getPersonByID(@PathVariable(value = "id") Long personID) {
 		return myRepository.findById(personID)
 				.orElseThrow(() -> new ResourceNotFoundException("mySpringBootDataModel", "id", personID));
